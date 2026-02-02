@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const fixedAssetsController_1 = require("../controllers/fixedAssetsController");
+const router = (0, express_1.Router)();
+router.get('/fixed-assets', fixedAssetsController_1.getFixedAssets);
+router.post('/fixed-assets', fixedAssetsController_1.createFixedAsset);
+router.put('/fixed-assets/:id', fixedAssetsController_1.updateFixedAsset);
+router.delete('/fixed-assets/:id', fixedAssetsController_1.deleteFixedAsset);
+exports.default = router;

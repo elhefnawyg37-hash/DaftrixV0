@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const accountController_1 = require("../controllers/accountController");
+const router = (0, express_1.Router)();
+router.get('/', accountController_1.getAccounts);
+router.post('/', accountController_1.createAccount);
+router.post('/recalculate-balances', accountController_1.recalculateAccountBalances);
+router.put('/:id', accountController_1.updateAccount);
+router.delete('/:id', accountController_1.deleteAccount);
+exports.default = router;

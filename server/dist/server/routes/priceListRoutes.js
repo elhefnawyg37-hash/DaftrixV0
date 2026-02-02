@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const priceListController_1 = require("../controllers/priceListController");
+const router = (0, express_1.Router)();
+router.get('/', priceListController_1.getPriceLists);
+router.post('/', priceListController_1.createPriceList);
+router.put('/:id', priceListController_1.updatePriceList);
+router.delete('/:id', priceListController_1.deletePriceList);
+router.patch('/:id/toggle', priceListController_1.togglePriceListStatus);
+exports.default = router;
